@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video {
+            flex: 1 1 300px;
+            max-width: 300px;
+        }
+
+        .video video {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+
+        /* Media Query per dispositivi mobili */
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+            }
+
+            .video {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
+        <div class="video">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
+        <div class="video">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
